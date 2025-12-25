@@ -62,6 +62,13 @@
 			background: rgba(0,0,0,0.8);
 			color: #fff;
 		}
+		@media (max-width: 768px) {
+			#fh5co-header {
+				background-position: center center !important;
+				background-size: cover !important;
+				background-attachment: scroll !important; /* Tắt parallax trên mobile nếu cần */
+			}
+		}
 	</style>
 
 	<!-- Modernizr JS -->
@@ -162,12 +169,12 @@
 									<h3>Đón khách</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>9:00 AM</span>
+										<span>7:00 AM</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Thứ 7 24</span>
-										<span>Tháng 1, 2026</span>
+										<span>Thứ 7</span>
+										<span>24.01.2026</span>
 									</div>
 									<p>Đón khách tại nhà gái.</p>
 								</div>
@@ -177,12 +184,12 @@
 									<h3>Chụp hình</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>9:10 AM</span>
+										<span>7:30 AM</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Thứ 7 24</span>
-										<span>Tháng 1, 2026</span>
+										<span>Thứ 7</span>
+										<span>24.01.2026</span>
 									</div>
 									<p>Chụp hình lưu niệm.</p>
 								</div>
@@ -192,12 +199,12 @@
 									<h3>Tiệc</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>9:30 AM</span>
+										<span>8:00 AM</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Thứ 7 24</span>
-										<span>Tháng 1, 2026</span>
+										<span>Thứ 7</span>
+										<span>24.01.2026</span>
 									</div>
 									<p>Tiệc mừng tại nhà gái.</p>
 								</div>
@@ -207,12 +214,12 @@
 									<h3>Nghi lễ</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>11:00 AM</span>
+										<span>9:00 AM</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Thứ 7 24</span>
-										<span>Tháng 1, 2026</span>
+										<span>Thứ 7</span>
+										<span>24.01.2026</span>
 									</div>
 									<p>Nghi lễ cưới tại nhà gái.</p>
 								</div>
@@ -225,59 +232,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-couple-story">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>Chúng ta yêu thương nhau</span>
-					<h2>Our Love Story</h2>
-					<p>Đúng là vì yêu thương nhau nên mới có thể chịu đựng được nhau đến mức này.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline animate-box">
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Lần đầu gặp gỡ</h3>
-									<span class="date">02 Tháng 1</span>
-								</div>
-								<div class="timeline-body">
-									<p>Cuộc "chạm trán" định mệnh.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">First Date</h3>
-									<span class="date">14 Tháng 2</span>
-								</div>
-								<div class="timeline-body">
-									<p>Buổi hẹn đầu tiên của hai đứa.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Khi cả 2 đã có nhau</h3>
-									<span class="date">15 Tháng 2</span>
-								</div>
-								<div class="timeline-body">
-									<p>Chính thức "vập" vào nhau.</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
@@ -291,38 +246,27 @@
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
-						
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.JPG); "> 
 						<a href="images/gallery-1.JPG">
 							<div class="case-studies-summary">
-								<span>14 Photos</span>
-								<h2>2 ly nước ép</h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.JPG); ">
 						<a href="images/gallery-2.JPG" class="color-2">
 							<div class="case-studies-summary">
-								<span>30 Photos</span>
-								<h2>Lèeeeeeeeeeeeee</h2>
 							</div>
 						</a>
 					</li>
-
-
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.JPG); ">
 						<a href="images/gallery-3.JPG" class="color-3">
 							<div class="case-studies-summary">
-								<span>90 Photos</span>
-								<h2>Đẹp xuất sắc</h2>
 							</div>
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-4.JPG); ">
 						<a href="images/gallery-4.JPG" class="color-4">
 							<div class="case-studies-summary">
-								<span>12 Photos</span>
-								<h2>Công ty hay là nhà</h2>
 							</div>
 						</a>
 					</li>
@@ -330,16 +274,12 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-5.JPG); ">
 							<a href="images/gallery-5.JPG" class="color-3">
 								<div class="case-studies-summary">
-									<span>50 Photos</span>
-									<h2>Vịt quay Bắc KInh</h2>
 								</div>
 							</a>
 						</li>
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-6.JPG); ">
 							<a href="images/gallery-6.JPG" class="color-4">
 								<div class="case-studies-summary">
-									<span>45 Photos</span>
-									<h2>Vườn treo hạ giới</h2>
 								</div>
 							</a>
 						</li>
@@ -347,8 +287,6 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-7.JPG); ">
 							<a href="images/gallery-7.JPG" class="color-4">
 								<div class="case-studies-summary">
-									<span>35 Photos</span>
-									<h2>Gì đây...........</h2>
 								</div>
 							</a>
 						</li>
@@ -356,16 +294,30 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-8.JPG); "> 
 							<a href="images/gallery-8.JPG" class="color-5">
 								<div class="case-studies-summary">
-									<span>90 Photos</span>
-									<h2>Bát giới hái đào</h2>
 								</div>
 							</a>
 						</li>
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-9.jpg); ">
 							<a href="images/gallery-9.jpg" class="color-6">
 								<div class="case-studies-summary">
-									<span>56 Photos</span>
-									<h2>Thỉnh chân kinh</h2>
+								</div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-10.JPG); ">
+							<a href="images/gallery-10.JPG" class="color-6">
+								<div class="case-studies-summary">
+								</div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-11.JPG); ">
+							<a href="images/gallery-11.JPG" class="color-6">
+								<div class="case-studies-summary">
+								</div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-12.JPG); ">
+							<a href="images/gallery-12.JPG" class="color-6">
+								<div class="case-studies-summary">
 								</div>
 							</a>
 						</li>
@@ -547,7 +499,7 @@
 	</div>
 	
 	<div class="music-toggle">
-		<a href="#" id="music-toggle-btn"><i class="icon-volume-up"></i></a>
+		<a href="#" id="music-toggle-btn"><i class="icon-play"></i></a>
 	</div>
 	
 	<!-- jQuery -->
@@ -600,7 +552,7 @@ $('#simply-countdown-losange').simplyCountdown({
 });
 </script>
 
-	<audio autoplay loop id="wedding-music">
+	<audio loop id="wedding-music">
 		<source src="music/wedding-song.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>
