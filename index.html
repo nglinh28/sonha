@@ -40,6 +40,30 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<style>
+		.music-toggle {
+			position: fixed;
+			bottom: 20px;
+			right: 80px;
+			z-index: 999;
+		}
+		.music-toggle a {
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: rgba(0,0,0,0.5);
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			color: #fff;
+			transition: all 0.3s;
+		}
+		.music-toggle a:hover {
+			background: rgba(0,0,0,0.8);
+			color: #fff;
+		}
+	</style>
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -86,9 +110,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Xin chào!</h2>
-					<h3>Thứ 7, 24/01/2026 tại Phú Thọ</h3>
-					<p>Hân hoan chào đón bạn đến chung vui cùng ngày hạnh phúc của chúng mình.</p>
+					<h2>Nhà gái</h2>
+					<h1>THỨ BẢY</h1>
+					<h1>24 . 01 . 2026</h1>
+					<p>TT. Lâm Thao, huyện Lâm Thao, Phú Thọ</p>
 				</div>
 			</div>
 			<div class="couple-wrap animate-box">
@@ -98,7 +123,9 @@
 					</div>
 					<div class="desc-groom">
 						<h3>Duy Sơn</h3>
-						<p>Dưới cái nắng miền Trung, dù mồ hôi có lấm tấm trên trán, anh vẫn rạng rỡ hết cỡ, sẵn sàng "vượt nắng thắng gió" để rước được vợ yêu quý về nhà.</p>
+						<p>Họ và tên: Nguyễn Duy Sơn</p>
+						<p>Ngày sinh: 20-08-1995</p>
+						<p>Cung hoàng đạo: Sư Tử</p>
 					</div>
 				</div>
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -108,7 +135,9 @@
 					</div>
 					<div class="desc-bride">
 						<h3>Ngọc Hà</h3>
-						<p>Cô dâu trong phòng thì tim đập thình thịch, hết soi gương lại chỉnh váy, chỉ đợi tiếng pháo nổ là sẵn sàng "chia tay đời độc thân" để theo anh về làm dâu xứ Nghệ</p>
+						<p>Họ và tên: Hán Ngọc Hà</p>
+						<p>Ngày sinh: 18-09-1996</p>
+						<p>Cung hoàng đạo: Xử Nữ</p>
 					</div>
 				</div>
 			</div>
@@ -127,13 +156,57 @@
 			<div class="row">
 				<div class="display-t">
 					<div class="display-tc">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
+						<div class="col-md-12">
+							<div class="col-md-3 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Lễ Chính</h3>
+									<h3>Đón khách</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>10:00 AM</span>
+										<span>9:00 AM</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>Thứ 7 24</span>
+										<span>Tháng 1, 2026</span>
+									</div>
+									<p>Đón khách tại nhà gái.</p>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Chụp hình</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>9:10 AM</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>Thứ 7 24</span>
+										<span>Tháng 1, 2026</span>
+									</div>
+									<p>Chụp hình lưu niệm.</p>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Tiệc</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>9:30 AM</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>Thứ 7 24</span>
+										<span>Tháng 1, 2026</span>
+									</div>
+									<p>Tiệc mừng tại nhà gái.</p>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Nghi lễ</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
 										<span>11:00 AM</span>
 									</div>
 									<div class="event-col">
@@ -141,38 +214,23 @@
 										<span>Thứ 7 24</span>
 										<span>Tháng 1, 2026</span>
 									</div>
-									<p>Đúng là cái đám cưới quê mình, dù mồ hôi nhễ nhại hay giọng có khản đặc vì hò hét chúc tụng, thì chỉ cần nhìn mâm cỗ đầy ắp và nụ cười rạng rỡ của hai họ là thấy vui hơn cả Tết. Chỉ khổ cho mấy anh thanh niên lát nữa vừa phải dìu chú rể, vừa phải dắt xe hộ nhau trong tình trạng "chân nọ đá chân kia", tạo nên một khung cảnh hỗn loạn đầy hài hước trên đường làng.</p>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Wedding Party</h3>
-									<div class="event-col">
-										<i class="icon-clock"></i>
-										<span>19:00 PM</span>
-										<span>23:00 PM</span>
-									</div>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>Thứ 6 23</span>
-										<span>Tháng 1, 2026</span>
-									</div>
-									<p>Cái gọi là "đại hội âm nhạc" vườn nhà hôm nay thực chất là một cuộc tra tấn lỗ tai quy mô lớn. Những "ca sĩ ẩn danh" trong xóm bỗng dưng lộ diện với sự tự tin tỉ lệ thuận với nồng độ cồn trong máu. Cứ mỗi ly rượu được rót xuống, những nốt cao lại được "khạc" ra bất chấp nhạc lý, khiến cả làng chỉ biết ngậm ngùi chịu trận giữa những bản bolero gào thét đến lạc giọng.</p>
+									<p>Nghi lễ cưới tại nhà gái.</p>
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- <div id="fh5co-couple-story">
+	<div id="fh5co-couple-story">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<span>Chúng ta yêu thương nhau</span>
-					<h2>Our Story</h2>
+					<h2>Our Love Story</h2>
 					<p>Đúng là vì yêu thương nhau nên mới có thể chịu đựng được nhau đến mức này.</p>
 				</div>
 			</div>
@@ -184,10 +242,10 @@
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Lần đầu gặp gỡ</h3>
-									<span class="date">02 Tháng 1 2025</span>
+									<span class="date">02 Tháng 1</span>
 								</div>
 								<div class="timeline-body">
-									<p>"Cuộc chạm trán" định mệnh lần đầu ấy thực chất là một màn "tình trong như đã, ngoài còn lúng túng" giữa một anh chàng ngơ ngác và một nàng cũng chẳng kém phần phân vân.</p>
+									<p>Cuộc "chạm trán" định mệnh.</p>
 								</div>
 							</div>
 						</li>
@@ -196,10 +254,10 @@
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">First Date</h3>
-									<span class="date">14 Tháng 2 2025</span>
+									<span class="date">14 Tháng 2</span>
 								</div>
 								<div class="timeline-body">
-									<p>Buổi hẹn đầu tiên của hai đứa đúng là một màn "đấu trí" đầy căng thẳng, nơi chú rể diện bộ cánh bảnh nhất nhưng tâm hồn lại đang bận... run cầm cập vì sợ nói hớ. Anh chàng ngồi trước mặt mỹ nhân mà tay chân lóng ngóng như lần đầu tập đi, gọi ly nước cam mà hút một hơi hết sạch cho bớt run, trong khi cô dâu thì cũng "nết na" lạ thường, ăn uống từ tốn đến mức mỗi hạt hướng dẫn cũng phải cắn làm ba để giữ hình tượng.</p>
+									<p>Buổi hẹn đầu tiên của hai đứa.</p>
 								</div>
 							</div>
 						</li>
@@ -208,10 +266,10 @@
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Khi cả 2 đã có nhau</h3>
-									<span class="date">15 Tháng 2 2025</span>
+									<span class="date">15 Tháng 2</span>
 								</div>
 								<div class="timeline-body">
-									<p>Khi đã chính thức "vập" vào nhau, cuộc đời hai đứa bỗng chuyển từ chế độ "phim tình cảm lãng mạn" sang "phim hài dài tập" với những màn phát cẩu lương khiến cả xóm phải sặc nước chè. Chú rể vốn là thanh niên cứng cỏi, ấy thế mà từ ngày yêu vào bỗng biến thành "xe ôm miễn phí" tận tụy, bất kể nắng cháy da hay mưa thối đất xứ Nghệ cũng sẵn sàng phi xe sang nhà nàng chỉ để... ngồi nhìn nhau cho đỡ nhớ.</p>
+									<p>Chính thức "vập" vào nhau.</p>
 								</div>
 							</div>
 						</li>
@@ -219,7 +277,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 	<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
@@ -437,19 +495,25 @@
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
 					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
+						<div class="col-md-3 col-sm-3">
 							<div class="form-group">
 								<label for="name" class="sr-only">Tên</label>
 								<input type="name" class="form-control" id="name" placeholder="Tên">
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4">
+						<div class="col-md-3 col-sm-3">
+							<div class="form-group">
+								<label for="phone" class="sr-only">Số điện thoại</label>
+								<input type="tel" class="form-control" id="phone" placeholder="Số điện thoại">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3">
 							<div class="form-group">
 								<label for="email" class="sr-only">Email</label>
 								<input type="email" class="form-control" id="email" placeholder="Email">
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4">
+						<div class="col-md-3 col-sm-3">
 							<button type="submit" class="btn btn-default btn-block">Tôi sẽ tham dự</button>
 						</div>
 					</form>
@@ -480,6 +544,10 @@
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<div class="music-toggle">
+		<a href="#" id="music-toggle-btn"><i class="icon-volume-up"></i></a>
 	</div>
 	
 	<!-- jQuery -->
@@ -536,6 +604,25 @@ $('#simply-countdown-losange').simplyCountdown({
 		<source src="music/wedding-song.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var audio = document.getElementById('wedding-music');
+			var button = document.getElementById('music-toggle-btn');
+			var icon = button.querySelector('i');
+
+			button.addEventListener('click', function(e) {
+				e.preventDefault();
+				if (audio.paused) {
+					audio.play();
+					icon.className = 'icon-pause';
+				} else {
+					audio.pause();
+					icon.className = 'icon-play';
+				}
+			});
+		});
+	</script>
 
 	</body>
 </html>
