@@ -52,6 +52,35 @@
 		<link rel="stylesheet" href="css/style.css">
 
 		<style>
+			body {
+    			margin: 0;
+    			padding: 0;
+    			background-color: #fff5f7;
+    			overflow-x: hidden; 
+    			overflow-y: auto;
+				}
+
+			#tsparticles {
+    			position: fixed !important;
+    			top: 0;
+    			left: 0;
+    			width: 100% !important;
+    			height: 100% !important;
+    			z-index: -1 !important; 
+    			pointer-events: none;
+			}
+
+			canvas {
+    			position: fixed !important;
+    			pointer-events: none !important;
+    			z-index: -1 !important;
+			}
+
+			.content {
+    			z-index: 10;
+    			position: relative;
+			}
+
 		.music-toggle {
 			position: fixed;
 			bottom: 20px;
@@ -81,53 +110,46 @@
 			}
 		}
 		p.wedding-invite {
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px;
-    color: #4a4a4a; 
-    line-height: 1.8;
+    		font-family: 'Dancing Script', cursive;
+    		font-size: 24px;
+    		color: #4a4a4a; 
+    		line-height: 1.8;
     
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  p.wedding-invite span {
-    color: #d4a373;
-    font-weight: bold;
-  }
-  .font-wedding-pattaya {
-    font-family: 'Pattaya', sans-serif;
-    font-size: 24px;         /* Kích thước vừa đủ đẹp cho lời mời */
-    line-height: 1.6;        /* Khoảng cách dòng giúp chữ không bị dính dấu */
-    color: #6d4c41;          /* Màu nâu gỗ sang trọng (có thể đổi theo tone đám cưới) */
-    letter-spacing: 0.5px;   /* Độ giãn chữ nhẹ giúp dễ đọc tiếng Việt hơn */
+    		text-align: center;
+    		max-width: 600px;
+    		margin: 0 auto;
+  			}
+  		p.wedding-invite span {
+    		color: #d4a373;
+    		font-weight: bold;
+  		}
+  		.font-wedding-pattaya {
+    		font-family: 'Pattaya', sans-serif;
+    		font-size: 24px;
+    		line-height: 1.6;
+    		color: #6d4c41;
+    		letter-spacing: 0.5px;
     
-    /* Khử răng cưa giúp font viết tay trông mượt hơn trên trình duyệt */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.wedding-date-modern {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase; /* Luôn in hoa */
-    letter-spacing: 4px;       /* Khoảng cách rộng tạo cảm giác sang trọng, thoáng đãng */
-    color: #2c3e50;            /* Màu xanh đen hoặc đen xám hiện đại */
-    display: block;
-    margin: 10px 0;
-    text-align: center;
-}
+    		-webkit-font-smoothing: antialiased;
+    		-moz-osx-font-smoothing: grayscale;
+		}
+		.wedding-date-modern {
+    		font-family: 'Montserrat', sans-serif;
+    		text-transform: uppercase;
+    		letter-spacing: 4px;
+    		color: #2c3e50;
+    		display: block;
+    		margin: 10px 0;
+    		text-align: center;
+		}
 </style>
-
-		<!-- Modernizr JS -->
-		<script src="js/modernizr-2.6.2.min.js"></script>
-		<!-- FOR IE9 below -->
-		<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
+	<script src="js/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
 
 		<div class="fh5co-loader"></div>
 
+		<div id="tsparticles"></div>
 		<div id="page">
 			<nav class="fh5co-nav" role="navigation">
 				<div class="container">
@@ -179,7 +201,7 @@
 								<img src="images/groom.JPG" alt="groom" class="img-responsive">
 							</div>
 							<div class="desc-groom">
-								<h3 >Duy Sơn</h3>
+								<h3>Duy Sơn</h3>
 								<p class="font-wedding-pattaya">Họ và tên: Nguyễn Duy Sơn</p>
 								<p>Ngày sinh: 20-08-1995</p>
 								<p>Trai đất Nghệ</p>
@@ -570,16 +592,16 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/magnific-popup-options.js"></script>
 
-		<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 		<script src="js/simplyCountdown.js"></script>
 		<!-- Main -->
 		<script src="js/main.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/tsparticles-all@2.12.0/tsparticles.all.bundle.min.js"></script>
 
 		<script>
 
 var d = new Date(2026, 0, 24, 10, 0, 0);
 
-// default example
 simplyCountdown('.simply-countdown-one', {
     year: d.getFullYear(),
     month: d.getMonth() + 1,
@@ -597,7 +619,6 @@ simplyCountdown('.simply-countdown-one', {
     plural: false
 });
 
-// jQuery example
 $('#simply-countdown-losange').simplyCountdown({
     year: d.getFullYear(),
     month: d.getMonth() + 1,
@@ -616,7 +637,6 @@ $('#simply-countdown-losange').simplyCountdown({
     enableUtc: false
 });
 
-// Save-the-date: generate .ics file and offer Google Calendar quick-add
 (function(){
     var btn = document.getElementById('save-date-btn');
     if(!btn) return;
@@ -632,7 +652,6 @@ $('#simply-countdown-losange').simplyCountdown({
         var eventLocation = 'Phú Thọ, Việt Nam';
         var eventDescription = 'Tham dự lễ cưới của Duy Sơn & Ngọc Hà';
 
-        // Use the same date used above (variable d)
         var start = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds());
         var durationHours = 3; // default duration
         var end = new Date(start.getTime() + durationHours * 60 * 60 * 1000);
@@ -661,7 +680,6 @@ $('#simply-countdown-losange').simplyCountdown({
         link.click();
         setTimeout(function(){ URL.revokeObjectURL(link.href); document.body.removeChild(link); }, 1000);
 
-        // Open Google Calendar quick-add in new tab as option (will open web UI if signed in)
         var gcalStart = toICSDate(start);
         var gcalEnd = toICSDate(end);
         var gcalUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
@@ -697,6 +715,32 @@ $('#simply-countdown-losange').simplyCountdown({
 			});
 		});
 	</script>
+
+		<script>
+        tsParticles.load("tsparticles", {
+    fullScreen: { 
+        enable: true, 
+        zIndex: -1
+    },
+    particles: {
+        number: { value: 50 },
+        color: { value: ["#ff5d8f", "#ff99ac"] },
+        shape: { type: "heart" }, 
+        opacity: { value: 0.6 },
+        size: { value: { min: 10, max: 20 } },
+        move: {
+            enable: true,
+            speed: 2,
+            direction: "bottom",
+            outModes: "out"
+        },
+        wobble: { enable: true, distance: 10, speed: 10 }
+    },
+    background: {
+        color: "transparent"
+    }
+});
+    </script>
 
 	</body>
 </html>
