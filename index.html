@@ -34,10 +34,11 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap"
 			rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 		<!-- Animate.css -->
 		<link rel="stylesheet" href="css/animate.css">
-		<!-- Icomoon Icon Fonts-->
-		<link rel="stylesheet" href="css/icomoon.css">
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="css/bootstrap.css">
 
@@ -98,6 +99,12 @@
 			color: #fff;
 			transition: all 0.3s;
 		}
+		.qr-toggle a i,
+		.music-toggle a i {
+    		font-size: 22px;
+    		line-height: 50px;
+		}
+		
 		.music-toggle a:hover {
 			background: rgba(0,0,0,0.8);
 			color: #fff;
@@ -142,8 +149,29 @@
     		margin: 10px 0;
     		text-align: center;
 		}
+		.qr-toggle {
+    		position: fixed;
+    		bottom: 20px;
+    		right: 140px; /* nằm bên trái nút music */
+    		z-index: 999;
+		}
+		.qr-toggle a {
+    		display: block;
+    		width: 50px;
+    		height: 50px;
+    		background: rgba(0,0,0,0.5);
+    		border-radius: 50%;
+    		text-align: center;
+    		line-height: 50px;
+    		color: #fff;
+    		transition: all 0.3s;
+		}
+		.qr-toggle a:hover {
+		    background: rgba(0,0,0,0.8);
+		    color: #fff;
+		}
 </style>
-	<script src="js/modernizr-2.6.2.min.js"></script>
+		<script src="js/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
 
@@ -164,7 +192,7 @@
 			</nav>
 
 			<header id="fh5co-header" class="fh5co-cover" role="banner"
-				style="background-image:url(images/img_bg_2.jpg);"
+				style="background-image:url(images/img_bg_7.jpg);"
 				data-stellar-background-ratio="0.5">
 				<div class="overlay"></div>
 				<div class="container">
@@ -202,19 +230,19 @@
 							</div>
 							<div class="desc-groom">
 								<h3>Duy Sơn</h3>
-								<p class="font-wedding-pattaya">Họ và tên: Nguyễn Duy Sơn</p>
+								<p class="font-wedding-pattaya">Chú rể: Nguyễn Duy Sơn</p>
 								<p>Ngày sinh: 20-08-1995</p>
-								<p>Trai đất Nghệ</p>
+								<p>Trai xứ Nghệ</p>
 							</div>
 						</div>
-						<p class="heart text-center"><i class="icon-heart2"></i></p>
+						<p class="heart text-center"><i class="fa-solid fa-heart"></i></p>
 						<div class="couple-half">
 							<div class="bride">
 								<img src="images/bride.JPG" alt="groom" class="img-responsive">
 							</div>
 							<div class="desc-bride">
 								<h3>Ngọc Hà</h3>
-								<p class="font-wedding-pattaya">Họ và tên: Hán Ngọc Hà</p>
+								<p class="font-wedding-pattaya">Cô dâu: Hán Ngọc Hà</p>
 								<p>Ngày sinh: 18-09-1996</p>
 								<p>Gái đất Tổ</p>
 							</div>
@@ -242,11 +270,11 @@
 										<div class="event-wrap animate-box">
 											<h3>Đón khách</h3>
 											<div class="event-col">
-												<i class="icon-clock"></i>
+												<i class="fa-regular fa-clock"></i>
 												<span>7:00 AM</span>
 											</div>
 											<div class="event-col">
-												<i class="icon-calendar"></i>
+												<i class="fa-regular fa-calendar"></i>
 												<span>Thứ 7</span>
 												<span>24.01.2026</span>
 											</div>
@@ -257,11 +285,11 @@
 										<div class="event-wrap animate-box">
 											<h3>Chụp hình</h3>
 											<div class="event-col">
-												<i class="icon-clock"></i>
+												<i class="fa-regular fa-clock"></i>
 												<span>7:30 AM</span>
 											</div>
 											<div class="event-col">
-												<i class="icon-calendar"></i>
+												<i class="fa-regular fa-calendar"></i>
 												<span>Thứ 7</span>
 												<span>24.01.2026</span>
 											</div>
@@ -272,11 +300,11 @@
 										<div class="event-wrap animate-box">
 											<h3>Nghi lễ</h3>
 											<div class="event-col">
-												<i class="icon-clock"></i>
+												<i class="fa-regular fa-clock"></i>
 												<span>8:00 AM</span>
 											</div>
 											<div class="event-col">
-												<i class="icon-calendar"></i>
+												<i class="fa-regular fa-calendar"></i>
 												<span>Thứ 7</span>
 												<span>24.01.2026</span>
 											</div>
@@ -287,11 +315,11 @@
 										<div class="event-wrap animate-box">
 											<h3>Bữa cơm thân mật</h3>
 											<div class="event-col">
-												<i class="icon-clock"></i>
+												<i class="fa-regular fa-clock"></i>
 												<span>10:30 AM</span>
 											</div>
 											<div class="event-col">
-												<i class="icon-calendar"></i>
+												<i class="fa-regular fa-calendar"></i>
 												<span>Thứ 7</span>
 												<span>24.01.2026</span>
 											</div>
@@ -323,14 +351,14 @@
 							<ul id="fh5co-gallery-list">
 								<li class="one-third animate-box" data-animate-effect="fadeIn"
 									style="background-image: url(images/gallery-2.JPG); ">
-									<a href="images/gallery-1.JPG">
+									<a href="images/gallery-2.JPG">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
 								<li class="one-third animate-box" data-animate-effect="fadeIn"
 									style="background-image: url(images/gallery-1.JPG); ">
-									<a href="images/gallery-2.JPG" class="color-2">
+									<a href="images/gallery-1.JPG" class="color-2">
 										<div class="case-studies-summary">
 										</div>
 									</a>
@@ -389,7 +417,7 @@
 								</li>
 								<li class="one-third animate-box" data-animate-effect="fadeIn"
 									style="background-image: url(images/gallery-12.JPG); ">
-									<a href="images/gallery-10.JPG" class="color-6">
+									<a href="images/gallery-12.JPG" class="color-6">
 										<div class="case-studies-summary">
 										</div>
 									</a>
@@ -403,7 +431,7 @@
 								</li>
 								<li class="one-third animate-box" data-animate-effect="fadeIn"
 									style="background-image: url(images/gallery-10.JPG); ">
-									<a href="images/gallery-12.JPG" class="color-6">
+									<a href="images/gallery-10.JPG" class="color-6">
 										<div class="case-studies-summary">
 										</div>
 									</a>
@@ -566,11 +594,64 @@
 		</div>
 
 		<div class="gototop js-top">
-			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+			<a href="#" class="js-gotop"><i class="fa-solid fa-arrow-up"></i></a>
+		</div>
+
+		<div class="qr-toggle">
+			<a href="#" data-toggle="modal" data-target="#qrModal">
+				<i class="fa-solid fa-qrcode"></i>
+			</a>
 		</div>
 
 		<div class="music-toggle">
-			<a href="#" id="music-toggle-btn"><i class="icon-play"></i></a>
+			<a href="#" id="music-toggle-btn"><i class="fa-solid fa-play"></i></a>
+		</div>
+		<!-- QR Code Modal -->
+		<div class="modal fade" id="qrModal" tabindex="-1" role="dialog"
+			aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">💌 Mừng cưới online – khỏi cần phong bì 😆</h4>
+					</div>
+
+					<div class="modal-body">
+						<p style="font-size:18px;margin-bottom:25px;">
+							Đường xa không tiện ghé, hoặc lỡ tay quên phong bì?
+							<br>
+							<strong>Không sao cả!</strong> Quét nhẹ mã dưới đây là tình cảm tới liền
+							💖
+						</p>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<h4>🤵 Chú rể</h4>
+								<img src="images/qr_son.jpg"
+									class="img-responsive center-block"
+									style="max-width:260px;">
+								<p class="mt-2"><em>Quét là chú rể cười liền 😄</em></p>
+							</div>
+
+							<div class="col-sm-6">
+								<h4>👰 Cô dâu</h4>
+								<img src="images/qr_ha.jpg"
+									class="img-responsive center-block"
+									style="max-width:260px;">
+								<p class="mt-2"><em>Quét là cô dâu nhớ hoài 💕</em></p>
+							</div>
+						</div>
+
+						<hr>
+
+						<p style="font-size:16px;color:#777;">
+							Cảm ơn bạn đã góp một phần nhỏ để tụi mình
+							<br>
+							<strong>mua gạo – trả nợ cưới – sống hạnh phúc trăm năm</strong> 😂
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- jQuery -->
@@ -707,10 +788,10 @@ $('#simply-countdown-losange').simplyCountdown({
 				e.preventDefault();
 				if (audio.paused) {
 					audio.play();
-					icon.className = 'icon-pause';
+					icon.className = 'fa-solid fa-pause';
 				} else {
 					audio.pause();
-					icon.className = 'icon-play';
+					icon.className = 'fa-solid fa-play';
 				}
 			});
 		});
