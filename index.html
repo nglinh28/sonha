@@ -34,8 +34,9 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap"
 			rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+			rel="stylesheet">
 
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -55,144 +56,159 @@
 		<!-- Theme style  -->
 		<link rel="stylesheet" href="css/style.css">
 
-		<style>
-			body {
-    			margin: 0;
-    			padding: 0;
-    			background-color: #fff5f7;
-    			overflow-x: hidden; 
-    			overflow-y: auto;
-				}
+		<script src="js/modernizr-2.6.2.min.js"></script>
+	</head>
+
+	<style>
+					body {
+			    margin: 0;
+			    padding: 0;
+			    background-color: #fff5f7;
+			    overflow-x: hidden;
+			    overflow-y: auto;
+			}
 
 			#tsparticles {
-    			position: fixed !important;
-    			top: 0;
-    			left: 0;
-    			width: 100% !important;
-    			height: 100% !important;
-    			z-index: -1 !important; 
-    			pointer-events: none;
+			    position: fixed !important;
+			    top: 0;
+			    left: 0;
+			    width: 100% !important;
+			    height: 100% !important;
+			    z-index: -1 !important;
+			    pointer-events: none;
 			}
 
 			canvas {
-    			position: fixed !important;
-    			pointer-events: none !important;
-    			z-index: -1 !important;
+			    position: fixed !important;
+			    pointer-events: none !important;
+			    z-index: -1 !important;
 			}
 
 			.content {
-    			z-index: 10;
-    			position: relative;
+			    z-index: 10;
+			    position: relative;
 			}
 
-		.music-toggle {
-			position: fixed;
-			bottom: 20px;
-			right: 80px;
-			z-index: 999;
-		}
-		.music-toggle a {
-			display: block;
-			width: 50px;
-			height: 50px;
-			background: rgba(0,0,0,0.5);
-			border-radius: 50%;
-			text-align: center;
-			line-height: 50px;
-			color: #fff;
-			transition: all 0.3s;
-		}
-		.qr-toggle a i,
-		.music-toggle a i {
-    		font-size: 22px;
-    		line-height: 50px;
-		}
-		
-		.music-toggle a:hover {
-			background: rgba(0,0,0,0.8);
-			color: #fff;
-		}
-		@media (max-width: 768px) {
-			#fh5co-header {
-				background-position: center center !important;
-				background-size: cover !important;
-				background-attachment: scroll !important; /* Tắt parallax trên mobile nếu cần */
+			.music-toggle {
+			    position: fixed;
+			    bottom: 20px;
+			    right: 80px;
+			    z-index: 999;
 			}
-		}
-		p.wedding-invite {
-    		font-family: 'Dancing Script', cursive;
-    		font-size: 24px;
-    		color: #4a4a4a; 
-    		line-height: 1.8;
-    
-    		text-align: center;
-    		max-width: 600px;
-    		margin: 0 auto;
-  			}
-  		p.wedding-invite span {
-    		color: #d4a373;
-    		font-weight: bold;
-  		}
-  		.font-wedding-pattaya {
-    		font-family: 'Pattaya', sans-serif;
-    		font-size: 24px;
-    		line-height: 1.6;
-    		color: #6d4c41;
-    		letter-spacing: 0.5px;
-    
-    		-webkit-font-smoothing: antialiased;
-    		-moz-osx-font-smoothing: grayscale;
-		}
-		.wedding-date-modern {
-    		font-family: 'Montserrat', sans-serif;
-    		text-transform: uppercase;
-    		letter-spacing: 4px;
-    		color: #2c3e50;
-    		display: block;
-    		margin: 10px 0;
-    		text-align: center;
-		}
-		.qr-toggle {
-    		position: fixed;
-    		bottom: 20px;
-    		right: 140px; /* nằm bên trái nút music */
-    		z-index: 999;
-		}
-		.qr-toggle a {
-    		display: block;
-    		width: 50px;
-    		height: 50px;
-    		background: rgba(0,0,0,0.5);
-    		border-radius: 50%;
-    		text-align: center;
-    		line-height: 50px;
-    		color: #fff;
-    		transition: all 0.3s;
-		}
-		.qr-toggle a:hover {
-		    background: rgba(0,0,0,0.8);
-		    color: #fff;
-		}
-		/* Font riêng cho modal QR */
-#qrModal {
-    font-family: "Nunito", Arial, serif;
-}
 
-#qrModal .modal-title {
-    font-size: 30px;
-}
+			.music-toggle a {
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: rgba(0, 0, 0, 0.5);
+			    border-radius: 50%;
+			    text-align: center;
+			    line-height: 50px;
+			    color: #fff;
+			    transition: all 0.3s;
+			}
 
-#qrModal p {
-    font-size: 20px;
-}
+			.qr-toggle a i,
+			.music-toggle a i {
+			    font-size: 22px;
+			    line-height: 50px;
+			}
 
-#qrModal h4 {
-    font-size: 24px;
-}
+			.music-toggle a:hover {
+			    background: rgba(0, 0, 0, 0.8);
+			    color: #fff;
+			}
 
-</style>
-		<script src="js/modernizr-2.6.2.min.js"></script>
-	</head>
+			@media (max-width: 768px) {
+			    #fh5co-header {
+			        background-position: center center !important;
+			        background-size: cover !important;
+			        background-attachment: scroll !important;
+			        /* Tắt parallax trên mobile nếu cần */
+			    }
+			}
+
+			p.wedding-invite {
+			    font-family: 'Dancing Script', cursive;
+			    font-size: 24px;
+			    color: #4a4a4a;
+			    line-height: 1.8;
+
+			    text-align: center;
+			    max-width: 600px;
+			    margin: 0 auto;
+			}
+
+			p.wedding-invite span {
+			    color: #d4a373;
+			    font-weight: bold;
+			}
+
+			.font-wedding-pattaya {
+			    font-family: 'Pattaya', sans-serif;
+			    font-size: 24px;
+			    line-height: 1.6;
+			    color: #6d4c41;
+			    letter-spacing: 0.5px;
+
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			}
+
+			.wedding-date-modern {
+			    font-family: 'Montserrat', sans-serif;
+			    text-transform: uppercase;
+			    letter-spacing: 4px;
+			    color: #2c3e50;
+			    display: block;
+			    margin: 10px 0;
+			    text-align: center;
+			}
+
+			.qr-toggle {
+			    position: fixed;
+			    bottom: 20px;
+			    right: 140px;
+			    /* nằm bên trái nút music */
+			    z-index: 999;
+			}
+
+			.qr-toggle a {
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: rgba(0, 0, 0, 0.5);
+			    border-radius: 50%;
+			    text-align: center;
+			    line-height: 50px;
+			    color: #fff;
+			    transition: all 0.3s;
+			}
+
+			.qr-toggle a:hover {
+			    background: rgba(0, 0, 0, 0.8);
+			    color: #fff;
+			}
+
+			/* Font riêng cho modal QR */
+			#qrModal {
+			    font-family: "Nunito", Arial, serif;
+			}
+
+			#qrModal .modal-title {
+			    font-size: 30px;
+			}
+
+			#qrModal p {
+			    font-size: 20px;
+			}
+
+			#qrModal h4 {
+			    font-size: 24px;
+			}
+
+
+	</style>
 	<body>
 
 		<div class="fh5co-loader"></div>
@@ -219,7 +235,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<div class="display-t">
-								<div class="display-tc animate-box" data-animate-effect="fadeIn">
+								<div class="display-tc animate-box" data-animate-effect="fadeInLeft">
 									<h1>Duy Sơn &amp; Ngọc Hà</h1>
 									<h2>We Are Getting Married</h2>
 									<div class="simply-countdown simply-countdown-one"></div>
@@ -243,8 +259,9 @@
 							<p class="wedding-invite">Số nhà 68, Khu Lâm Thao, Lâm Thao, Phú Thọ</p>
 						</div>
 					</div>
-					<div class="couple-wrap animate-box">
-						<div class="couple-half">
+					<div class="couple-wrap">
+						<!-- CHÚ RỂ -->
+						<div class="couple-half animate-box" data-animate-effect="fadeInLeft">
 							<div class="groom">
 								<img src="images/groom.JPG" alt="groom" class="img-responsive">
 							</div>
@@ -255,10 +272,15 @@
 								<p>Trai xứ Nghệ</p>
 							</div>
 						</div>
-						<p class="heart text-center"><i class="fa-solid fa-heart"></i></p>
-						<div class="couple-half">
+
+						<p class="heart text-center animate-box" data-animate-effect="fadeIn">
+							<i class="fa-solid fa-heart"></i>
+						</p>
+
+						<!-- CÔ DÂU -->
+						<div class="couple-half animate-box" data-animate-effect="fadeInRight">
 							<div class="bride">
-								<img src="images/bride.JPG" alt="groom" class="img-responsive">
+								<img src="images/bride.JPG" alt="bride" class="img-responsive">
 							</div>
 							<div class="desc-bride">
 								<h3>Ngọc Hà</h3>
@@ -268,6 +290,7 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 
@@ -369,28 +392,28 @@
 					<div class="row row-bottom-padded-md">
 						<div class="col-md-12">
 							<ul id="fh5co-gallery-list">
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInLeft"
 									style="background-image: url(images/gallery-2.JPG); ">
 									<a href="images/gallery-2.JPG">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInUp"
 									style="background-image: url(images/gallery-1.JPG); ">
 									<a href="images/gallery-1.JPG" class="color-2">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="zoomIn"
 									style="background-image: url(images/gallery-3.JPG); ">
 									<a href="images/gallery-3.JPG" class="color-3">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInRight"
 									style="background-image: url(images/gallery-4.JPG); ">
 									<a href="images/gallery-4.JPG" class="color-4">
 										<div class="case-studies-summary">
@@ -398,14 +421,14 @@
 									</a>
 								</li>
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInLeft"
 									style="background-image: url(images/gallery-5.JPG); ">
 									<a href="images/gallery-5.JPG" class="color-3">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInUp"
 									style="background-image: url(images/gallery-6.JPG); ">
 									<a href="images/gallery-6.JPG" class="color-4">
 										<div class="case-studies-summary">
@@ -413,7 +436,7 @@
 									</a>
 								</li>
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="zoomIn"
 									style="background-image: url(images/gallery-7.JPG); ">
 									<a href="images/gallery-7.JPG" class="color-4">
 										<div class="case-studies-summary">
@@ -421,35 +444,35 @@
 									</a>
 								</li>
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInRight"
 									style="background-image: url(images/gallery-8.JPG); ">
 									<a href="images/gallery-8.JPG" class="color-5">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInLeft"
 									style="background-image: url(images/gallery-9.jpg); ">
 									<a href="images/gallery-9.jpg" class="color-6">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="zoomIn"
 									style="background-image: url(images/gallery-12.JPG); ">
 									<a href="images/gallery-12.JPG" class="color-6">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInUp"
 									style="background-image: url(images/gallery-11.JPG); ">
 									<a href="images/gallery-11.JPG" class="color-6">
 										<div class="case-studies-summary">
 										</div>
 									</a>
 								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
+								<li class="one-third animate-box" data-animate-effect="fadeInRight	"
 									style="background-image: url(images/gallery-10.JPG); ">
 									<a href="images/gallery-10.JPG" class="color-6">
 										<div class="case-studies-summary">
@@ -645,20 +668,46 @@
 						</p>
 
 						<div class="row">
-							<div class="col-sm-6">
+							<!-- CHÚ RỂ -->
+							<div class="col-sm-6 text-center">
 								<h4>🤵 Chú rể</h4>
 								<img src="images/qr_son.jpg"
 									class="img-responsive center-block"
 									style="max-width:260px;">
-								<p class="mt-2"><em>Quét là chú rể cười liền 😄</em></p>
+
+								<!-- số tài khoản ẩn -->
+								<input type="text" id="stk-chure"
+									value="082100016928801"
+									readonly
+									style="position:absolute;left:-9999px;">
+
+								<button class="btn btn-success mt-3"
+									onclick="copySTK('stk-chure', 'Chú rể')">
+									📋 Copy số tài khoản
+								</button>
+
+								<p class="mt-2"><em>Quét hoặc copy là chú rể cười liền 😄</em></p>
 							</div>
 
-							<div class="col-sm-6">
+							<!-- CÔ DÂU -->
+							<div class="col-sm-6 text-center">
 								<h4>👰 Cô dâu</h4>
 								<img src="images/qr_ha.jpg"
 									class="img-responsive center-block"
 									style="max-width:260px;">
-								<p class="mt-2"><em>Quét là cô dâu nhớ hoài 💕</em></p>
+
+								<!-- số tài khoản ẩn -->
+								<input type="text" id="stk-codau"
+									value="700007983598"
+									readonly
+									style="position:absolute;left:-9999px;">
+
+								<button class="btn btn-danger mt-3"
+									onclick="copySTK('stk-codau', 'Cô dâu')">
+									📋 Copy số tài khoản
+								</button>
+
+								<p class="mt-2"><em>Copy xong là cô dâu nhớ hoài 💕</em></p>
 							</div>
 						</div>
 
@@ -842,6 +891,17 @@ $('#simply-countdown-losange').simplyCountdown({
     }
 });
     </script>
+		<script>
+function copySTK(inputId, name) {
+    var input = document.getElementById(inputId);
+    input.select();
+    input.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+
+    // Thông báo vui vẻ 😄
+    alert("💖 Đã copy số tài khoản của " + name + "!\nTiền đi trước – tình theo sau 😆");
+}
+</script>
 
 	</body>
 </html>
